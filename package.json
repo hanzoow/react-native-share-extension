@@ -1,0 +1,54 @@
+{
+  "_from": "react-native-share-extension",
+  "_id": "react-native-share-extension@2.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-LWbyGd3Vu5m0TBvSado2NE4MJ5R3iRw4WpoT+6ptHNir19pM/inNQaFh+OiySLNNy5N058pFmWq3LFNA4DPZkg==",
+  "_location": "/react-native-share-extension",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-share-extension",
+    "name": "react-native-share-extension",
+    "escapedName": "react-native-share-extension",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-share-extension/-/react-native-share-extension-2.0.0.tgz",
+  "_shasum": "c645715ce6c937e1dd527c4df5635df89ca88a44",
+  "_spec": "react-native-share-extension",
+  "_where": "D:\\npm\\nudgemeapp",
+  "author": {
+    "name": "Ali Najafizadeh",
+    "email": "a.najafizadeh@gmail.com",
+    "url": "http://github.com/alinz"
+  },
+  "bugs": {
+    "url": "https://github.com/alinz/react-native-share-extension"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "share extension using react-native for both ios and android",
+  "homepage": "https://github.com/alinz/react-native-share-extension",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "share-extension"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "react-native-share-extension",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alinz/react-native-share-extension.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.0.0"
+}
