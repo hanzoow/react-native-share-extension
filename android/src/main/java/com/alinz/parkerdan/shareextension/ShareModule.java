@@ -42,7 +42,7 @@ public class ShareModule extends ReactContextBaseJavaModule {
     String value = "";
     String type = "";
     String action = "";
-
+    String url = "";
     Activity currentActivity = getCurrentActivity();
 
     if (currentActivity != null) {
@@ -56,20 +56,30 @@ public class ShareModule extends ReactContextBaseJavaModule {
         value = intent.getStringExtra(Intent.EXTRA_TEXT);
       } else if (Intent.ACTION_SEND.equals(action) && ("image/*".equals(type) || "image/jpeg".equals(type)
           || "image/png".equals(type) || "image/jpg".equals(type) || type.startsWith("application/"))) {
-        URI uri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
-        if (uri.toString().contains("google")) {
-          value = uri.toString();
-        } else {
-          value = "file://" + RealPathUtil.getRealPathFromURI(currentActivity, uri);
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        Uri uri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
+        try {
+          if(uri.toString().contains("google")){
+            value = uri.toString();
+          }else {
+            url = uri.toString();
+            value = "file://" + RealPathUtil.getFileFromUri(currentActivity, uri);
+          }
+
+        } catch (Exception e) {
+
         }
+
       } else {
         value = "";
+        url = "";
       }
     } else {
       value = "";
       type = "";
+      url = "";
     }
-
+    map.putString("url",url);
     map.putString("type", type);
     map.putString("value", value);
 
