@@ -60,6 +60,7 @@ public class ShareModule extends ReactContextBaseJavaModule {
         Uri uri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
         try {
           if(uri.toString().contains("google")){
+            url = uri.toString();
             value = uri.toString();
           }else {
             url = uri.toString();
